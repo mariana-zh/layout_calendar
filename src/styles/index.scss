@@ -2,29 +2,25 @@
 
 body {
   display: flex;
-  margin: 0;
-  height: 100vh;
   justify-content: center;
   align-items: center;
+  margin: 0;
+  height: 100vh;
 }
 
 .calendar {
   display: grid;
 
   grid-template-columns: repeat(7, $day-size);
-  flex-wrap: wrap;
   gap: $gap;
   padding: $padding;
-
-  width: ($day-size * $columns) + ($gap * ($columns - 1)) + ($padding * 2);
-  margin-left: 20px;
 
   &__day {
     background-color: #eee;
     height: $day-size;
     width: $day-size;
     border: 1px solid black;
-    transition: all 500ms;
+    transition: all $transition;
     box-sizing: border-box;
     display: flex;
     justify-content: center;
@@ -44,7 +40,7 @@ body {
     line-height: 1;
     content: '#{$i}';
     font-family: Arial, sans-serif;
-    font-size: 30px;
+    font-size: $font-size-day;
   }
 }
 
