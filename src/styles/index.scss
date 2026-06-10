@@ -31,7 +31,8 @@ body {
     width: $day-size;
     border: 1px solid black;
     transition: all $transition;
-    padding-top: $padding-top;
+
+    // padding-top: $padding-top;
 
     &:hover {
       cursor: pointer;
